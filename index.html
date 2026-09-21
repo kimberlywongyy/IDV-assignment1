@@ -20,6 +20,7 @@
   
   
   <script>
+    //Fetch the psi data from the government website
     fetch("https://api-open.data.gov.sg/v2/real-time/api/psi")
       .then(response => response.json())
       .then(data => {
