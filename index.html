@@ -1,7 +1,34 @@
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PSI Assignment</title>
+</head>
+<body>
+
+  <h1>Singapore PSI Readings</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Reading</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+  <tbody id="tableBody">
+  </tbody>
+  </table>
+
+
 <script>
 fetch("https://api-open.data.gov.sg/v2/real-time/api/psi")
 .then(response => response.json())
 .then(data => {
 console.log(data);
+})
+.catch(error => {
+console.error(error);
 });
 </script>
+</body>
+</html>
