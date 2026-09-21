@@ -22,9 +22,12 @@
   <script>
     //Fetch the psi data from the government website
     fetch("https://api-open.data.gov.sg/v2/real-time/api/psi")
-      .then(response => response.json())
+      //convert the response from the website to json format
+      .then(gvtReply => gvtReply.json())
+      //assign the json data to an object
       .then(data => {
-        console.log(data);
+        let readings = data.data.items[0].readings;
+        //console.log(data);  for debugging only
         })
     .catch(error => {
         console.error(error);
