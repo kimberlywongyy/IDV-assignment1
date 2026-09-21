@@ -26,8 +26,8 @@
       .then(gvtReply => gvtReply.json())
       //assign the json data to an object
       .then(data => {
-        let readings = data.data.items[0].readings;
-        //console.log(data);  for debugging only
+        //let readings = data.data.items[0].readings;
+        console.log(data);  //for debugging only
         })
     .catch(error => {
         console.error(error);
