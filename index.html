@@ -19,19 +19,24 @@
     </table>
   
   
-  <script>
-    //Fetch the psi data from the government website
+<script>
+
+    // Fetch the PSI data from the government API
     fetch("https://api-open.data.gov.sg/v2/real-time/api/psi")
-      //convert the response from the website to json format
+      // Convert the API response into JSON
       .then(gvtReply => gvtReply.json())
-      //assign the json data to an object
+      // The parsed JSON is now available as 'data'
       .then(data => {
-        //let readings = data.data.items[0].readings;
-        console.log(data);  //for debugging only
-        })
-    .catch(error => {
+        // Uncomment when we're ready to use it
+        // let readings = data.data.items[0].readings;
+        // Print the JSON to the browser console for debugging
+        console.log(data);
+      })
+      // Handle any errors
+      .catch(error => {
         console.error(error);
-    });
-  </script>
+      });
+
+</script>
 </body>
 </html>
