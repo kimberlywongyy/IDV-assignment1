@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>PSI Assignment 01</title>
+  <link rel="stylesheet" href="style.css">
+   <script src="prog.js" defer></script>
 </head>
 <body>
 
@@ -17,49 +19,5 @@
     <tbody id="tableBody">
     </tbody>
     </table>
-  
-  
-<script>
-
-    // Fetch the PSI data from the government API
-    fetch("https://api-open.data.gov.sg/v2/real-time/api/psi")
-      // Convert the API response into JSON
-      .then(gvtReply => gvtReply.json())
-      // The parsed JSON is now available as 'data'
-      .then(data => {
-        // Uncomment when we're ready to use it
-        // let readings = data.data.items[0].readings;
-        // Print the JSON to the browser console for debugging
-        console.log(data);
-      })
-      // Handle any errors
-      .catch(error => {
-        console.error(error);
-      });
-</script>
-<style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #1f2937;
-  }
-
-  main {
-    max-width: 540px;
-    margin: 24px;
-    padding: 40px;
-    text-align: center;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  }
-
-  h1 { margin-top: 0; color: #2563eb; }
-  p { line-height: 1.6; }
-</style>
 </body>
 </html>
